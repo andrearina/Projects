@@ -10,11 +10,12 @@
 
 <h1> Steps To Run The Program </h1>
 <ol> 
-  <li> After cloning the repository, open myProjectJava.Java on your Visual Studio Code </li> 
+  <li> After cloning the repository, go to MyJavaProject/src/myProjectJava.java path </li>
+  <li> File containing the code should be shown </li>
   <li> Click play button to allow the code to run </li>
   <li> You will be asked to enter a character from the displayed options </li>
   <li> Input a letter that will perform an action based on your desired output </li>
-  <li> Click Enter </li>
+  <li> Click Enter key on your keyboard </li>
   <li> An output will be displayed based on your chosen letter </li>
   <li> To run again, click play button and repeat the above steps </li>
 </ol>
