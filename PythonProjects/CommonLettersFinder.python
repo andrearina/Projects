@@ -1,0 +1,27 @@
+
+userInputOne = input("Enter your first word: ").lower()
+userInputTwo = input("Enter your second word: ").lower()
+space = ""
+
+firstWord = space.join(userInputOne)
+secondWord = space.join(userInputTwo)
+
+finalListOne = []
+finalListTwo = []
+
+finalFirstWord = sorted(firstWord)
+finalSecondWord = sorted(secondWord)
+
+for x in finalFirstWord:
+    for i in finalSecondWord:
+        if x == i:
+            finalListOne.append(x)
+        else:
+            print(end="")
+            
+for x in finalListOne:
+    if x not in finalListTwo and x != " ":
+        finalListTwo.append(x)
+        
+print(sorted(finalListTwo))
+
