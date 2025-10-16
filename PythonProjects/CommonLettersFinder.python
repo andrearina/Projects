@@ -1,4 +1,3 @@
-
 userInputOne = input("Enter your first word: ").lower()
 userInputTwo = input("Enter your second word: ").lower()
 space = ""
@@ -24,4 +23,3 @@ for x in finalListOne:
         finalListTwo.append(x)
         
 print(sorted(finalListTwo))
-
