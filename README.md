@@ -15,6 +15,8 @@
 
 [Steps Tracker](https://github.com/andrearina/Projects/blob/main/JavaProjects/StepsTracker.java) - A simple steps tracker where it checks whether the user has reached the target goal of 10,000 steps. This program prints the total steps taken, steps left, and whether the goal was reached. The pre-defined value on the variable can be changed depending on the desired user input. I have made this project using Java.
 
+[Common Letters Finder](https://github.com/andrearina/Projects/blob/main/PythonProjects/CommonLettersFinder.python) - A program that allows you to enter two inputs and determines which characters are common between the two values. This was made using Python. 
+
 <h2> Let's Connect! :postbox: </h2>
 
 <h4> LinkedIn: https://www.linkedin.com/in/andrearinapvitorio </h4>
