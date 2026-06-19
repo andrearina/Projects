@@ -4,8 +4,8 @@ Library    String
 Resource   ../Resources/Resources.robot
 
 *** Keywords ***
-
 Open Swag Labs Site
+    [Documentation]  Opens Chrome browser with disabled password manager and leak detection, then navigates to the login page and waits for page to load.
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
 
     ${prefs}=    Create Dictionary
