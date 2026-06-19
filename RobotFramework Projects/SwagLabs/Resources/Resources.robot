@@ -9,7 +9,7 @@ ${LOGIN_BTN}               //input[@id='login-button']
 ${LOGIN_PAGE_TITLE}        //div[text()='Swag Labs']
 ${HOME_PAGE_TITLE}         //span[@data-test='title' and text()='Products']
 ${MENU_BUTTON}             //div[@class='bm-burger-button']
-${LOGOUT_TEXT}             //a[@id='logout_sidebar_link']
+${LOGOUT_TEXT}             //a[@data-test='logout-sidebar-link']
 ${PRODUCT_ITEM_NAME}       //div[@class='inventory_item_name ' and text()='VALUE']
 
 # Test Data Variables
