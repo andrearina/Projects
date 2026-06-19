@@ -17,6 +17,8 @@
 
 [Common Letters Finder](https://github.com/andrearina/Projects/blob/main/PythonProjects/CommonLettersFinder.python) - A program that allows you to enter two inputs and determines which characters are common between the two values. This was made using Python. 
 
+[Palindrome](https://github.com/andrearina/Projects/blob/main/PythonProjects/Palindrome.py) - A program that checks whether an entered value is a palindrome or not a palindrome. This was made using Python.
+
 [Robot Framework Project - Sauce Demo (Swag Labs)](https://github.com/andrearina/Projects/tree/main/RobotFramework%20Projects/SwagLabs) - a UI test automation framework for the SauceDemo web application using Robot Framework and SeleniumLibrary. It is structured with reusable keywords, separate test data, and dynamic locators to keep the tests organized and easy to maintain. The framework covers basic user flows like login, checking products, adding items to the cart, and logging out. (Status: In Progress)
 
 <h2> Let's Connect! :postbox: </h2>
