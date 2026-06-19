@@ -34,6 +34,7 @@ Login To Swag Labs Site
 Logout Of Swag Labs Site
     Wait Until Element Is Visible  ${MENU_BUTTON}  timeout=10s
     Click Element  ${MENU_BUTTON}
+    Mouse Over  ${LOGOUT_TEXT}
     Click Element  ${LOGOUT_TEXT}
     Wait Until Element Is Visible  ${LOGIN_PAGE_TITLE}  timeout=10s
 
