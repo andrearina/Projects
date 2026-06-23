@@ -8,12 +8,22 @@ ${PASSWORD_TEXTFIELD}      //input[@id='password']
 ${LOGIN_BTN}               //input[@id='login-button']
 ${LOGIN_PAGE_TITLE}        //div[text()='Swag Labs']
 ${HOME_PAGE_TITLE}         //span[@data-test='title' and text()='Products']
-${MENU_BUTTON}             //div[@class='bm-burger-button']
+${MENU_BUTTON}             //div[@class='bm-burger-button']//button[@id='react-burger-menu-btn']
 ${LOGOUT_TEXT}             //a[@data-test='logout-sidebar-link']
 ${PRODUCT_ITEM_NAME}       //div[@class='inventory_item_name ' and text()='VALUE']
+${DROPDOWN_FILTER}         //select[@data-test='product-sort-container']
+${DROPDOWN_FILTER_VALUE}   //option[text()='VALUE']
+${MENU_FILTER_VALUE}       //a[@id='inventory_sidebar_link' and contains(text(),'VALUE')]
+${MENU_FILTER_EXIT_ICON}   //button[@id='react-burger-cross-btn']
+${MENU_FILTER_ITEMS}       //a[@id='inventory_sidebar_link']
+${MENU_FILTER_ABOUT}       //a[@id='about_sidebar_link']
+${MENU_FILTER_LOGOUT}      //a[@id='logout_sidebar_link']
+${MENU_FILTER_RESET}       //a[@id='reset_sidebar_link']
 
 # Test Data Variables
 ${USERNAME_LOGIN}        standard_user
 ${PASSWORD_LOGIN}        secret_sauce
 @{PRODUCT_NAMES_LIST}    Sauce Labs Backpack  Sauce Labs Bike Light  Sauce Labs Bolt T-Shirt
 ...                      Sauce Labs Fleece Jacket  Sauce Labs Onesie  Test.allTheThings() T-Shirt (Red)
+@{DROPDOWN_VALUES_LIST}  Name (A to Z)  Name (Z to A)  Price (low to high)  Price (high to low)
+@{MENU_VALUES_LIST}      All Items  About  Logout  Reset App State
