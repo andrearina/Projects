@@ -4,8 +4,9 @@ Library    String
 Resource   ../Resources/Resources.robot
 
 *** Keywords ***
+
 Open Swag Labs Site
-    [Documentation]  Opens Chrome browser with disabled password manager and leak detection, then navigates to the login page and waits for page to load.
+    [Documentation]    Opens Chrome browser with disabled password manager and leak detection, then navigates to the login page and waits for page to load.
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
 
     ${prefs}=    Create Dictionary
@@ -43,6 +44,11 @@ Close Swag Labs Site
     Run Keyword And Ignore Error    Logout Of Swag Labs Site
     Close All Browsers
 
+Wait And Click Element
+    [Arguments]  ${element}
+    Wait Until Element Is Visible  ${element}  timeout=10s
+    Click Element  ${element}
+
 Verify If Element Is Visible
     [Arguments]  ${element}
         Wait Until Element Is Visible  ${element}  timeout=10s
@@ -59,6 +65,22 @@ Verify Multiple Elements Are Visible
         END
     END
 
-Verify Products Are Displayed
+Verify Items Are Displayed
     [Arguments]  ${format}  ${locator}  @{products}
         Verify Multiple Elements Are Visible    ${format}  ${locator}  @{products}
+
+Verify Dropdown Filter Options Are Displayed
+    [Arguments]  @{dropdown_options}
+    FOR  ${option}  IN  @{dropdown_options}
+        Verify If Element Is Visible  ${DROPDOWN_FILTER}
+        Wait And Click Element  ${DROPDOWN_FILTER}
+        ${final_locator}=  Replace String  ${DROPDOWN_FILTER_VALUE}  VALUE  ${option}
+        Verify If Element Is Visible  ${final_locator}
+        Wait And Click Element  ${final_locator}
+    END
+
+Verify Menu Button Options Are Displayed
+    Wait And Click Element  ${MENU_BUTTON}
+    @{MENU_FILTER_ITEMS_LIST}  Create List  ${MENU_FILTER_ITEMS}  ${MENU_FILTER_ABOUT}  ${MENU_FILTER_LOGOUT}  ${MENU_FILTER_RESET}
+    Verify Items Are Displayed  ${False}  @{MENU_FILTER_ITEMS_LIST}
+    Wait And Click Element  ${MENU_FILTER_EXIT_ICON}
