@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    String
-Resource   ../Resources/Resources.robot
+Resource   ../Resources/TestData.robot
 
 *** Keywords ***
 
