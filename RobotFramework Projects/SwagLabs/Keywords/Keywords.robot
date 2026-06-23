@@ -8,17 +8,13 @@ Resource   ../Resources/TestData.robot
 Open Swag Labs Site
     [Documentation]    Opens Chrome browser with disabled password manager and leak detection, then navigates to the login page and waits for page to load.
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
-
     ${prefs}=    Create Dictionary
     ...    credentials_enable_service=${False}
     ...    profile.password_manager_enabled=${False}
     ...    profile.password_manager_leak_detection=${False}
-
     Call Method    ${options}    add_experimental_option    prefs    ${prefs}
-
     ${arg1}=    Set Variable    --disable-features=PasswordLeakDetection
     Call Method    ${options}    add_argument    ${arg1}
-
     Open Browser    ${LOGIN_URL}    ${BROWSER}    options=${options}
     Wait Until Element Is Visible  ${LOGIN_PAGE_TITLE}  timeout=10s
 
