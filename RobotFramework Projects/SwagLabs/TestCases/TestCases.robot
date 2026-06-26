@@ -14,6 +14,7 @@ TC01: Verify User Can Log In And Access The Products Page
     Verify Menu Button Options Are Displayed
 
 TC02: Verify Product Sorting By Name And Price
+    [Documentation]  Verifies that the product list is sorted correctly using all available filter options.
     Verify Ascending Or Descending Order Of Products  True     Name (A to Z)         ${PRODUCT_NAMES_LIST}
     Verify Ascending Or Descending Order Of Products  True     Name (Z to A)         ${PRODUCT_EXPECTED_LIST}
     Verify Ascending Or Descending Order Of Products  False    Price (low to high)   ${PRICE_ASC_EXPECTED_LIST}
